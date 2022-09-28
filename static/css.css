@@ -1,0 +1,264 @@
+html
+{ min-height: 100%;
+  
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /*height: 2000px;*/
+  background: #333;
+  font-family: 'Russo One', sans-serif;
+}
+
+/*body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	min-height: 100vh;
+  margin: 0;
+  padding: 0;}
+  /*height: 2000px;
+  background: #333;
+  font-family: 'Russo One', sans-serif;
+}*/
+
+/* HEADER*/
+
+header {
+  background: linear-gradient(#203F8D, rgba(133, 108, 233, 0.521));
+  padding: 50px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+    /* NAV*/
+    
+nav {
+  position:absolute;
+  right:0;
+  top:0;
+  margin-top:20px;
+  margin-right:20px;
+}
+
+li {
+list-style-type: none;
+text-decoration-color: none;
+margin-left:20px;
+float:left;
+}
+
+nav li :hover {
+  color: #191B21;
+}
+
+a {
+  text-decoration: none;
+  color: #E3E1EC;
+  font-size: 1.3em;
+  font-family: 'Russo One', sans-serif;
+ }
+
+/* TITRE*/
+
+h1 {
+  color : #191B21;
+  font-family: 'Russo One', sans-serif;
+  font-size: 3em;
+  position: relative;
+  text-align: center;
+}
+
+/* SEARCHBAR */
+
+.searchBox {
+  margin: auto;
+    position: absolute;
+    top: 20%;
+    left: 38%;
+    background:  rgba(51, 51, 51, 0.6);
+    height: 40px;
+    border-radius: 40px;
+    padding: 8px;
+
+}
+
+.searchBox:hover > .searchInput {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.searchBox:hover > .searchButton {
+  background: white;
+  color : #2f3640;
+}
+
+.searchButton {
+    color: white;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.searchInput {
+    border:none;
+    background: none;
+    outline:none;
+    float:left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+
+}
+
+@media screen and (max-width: 620px) {
+.searchBox:hover > .searchInput {
+    width: 150px;
+    padding: 0 6px;
+}
+}
+
+  /* FIN DU HEADER */
+
+  .filtremembre{
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+ /* SECTION CARTE */
+
+ /*CARDS*/
+
+ .container{
+  margin: 30px;
+  display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.container .card {
+  position: relative;
+  cursor: pointer;
+}
+
+.container .card .face{
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.container .card .face.face1{
+  width: 300px;
+  height: 220px;
+  position: relative;
+  background: #333;
+  z-index: 1;
+  transform: translateY(100px);
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.container .card:hover .face.face1{
+  background: linear-gradient(#203F8D, rgba(133, 108, 233, 0.521));
+  transform: translateY(0);
+}
+
+.container .card .face.face1 .content{
+  opacity: 0.4;
+  transition: 0.5s;
+}
+
+.container .card:hover .face.face1 .content{
+  opacity: 1;
+}
+
+.container .card .face.face1 .content img{
+  max-width: 100px;
+  margin-left: 100px;
+margin-top: 25px;
+margin-bottom: 10px;
+}
+
+
+.container .card .face.face2{
+  position: relative;
+  background: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  transform: translateY(-100px);
+  margin-left: 20px;
+  margin-right: 20px;
+
+}
+
+.container .card:hover .face.face2{
+  transform: translateY(0);
+}
+
+.container .card .face.face2 .content p{
+color: #191B21;
+  margin: 0;
+  padding: 0;
+  font-size: 0.5em;
+  display: inline;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.1em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.bouton{
+  margin-top: 30px;
+  text-align: center;
+}
+
+.bouton a {
+  text-decoration: none;
+  font-weight: 300;
+  color: #333;
+  padding: 10px;
+  font-size: 1.1em;
+  border-radius: 10px;
+
+}
+
+a:hover{
+  background-color: #333;
+  color: #E3E1EC;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+
+.local {
+  padding:10px;
+  background: linear-gradient(#203F8D, #6C59BB);;
+  height: 400px;
+  width:360px;
+  margin:auto;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius:15px;
+}
+
+h2{
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.3em;
+  text-align:center;
+}
+
+
+

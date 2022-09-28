@@ -1,0 +1,196 @@
+{{define "index"}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>
+            The Most Popular Artist API
+        </h1>
+        <nav>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About Us</a></li>
+        </nav>
+
+        <div class="searchBox">
+            <input class="searchInput" type="text" name="" placeholder="Search" id="searchBar">
+            <button class="searchButton" href="#">
+                <i class="material-icons">
+                    <div class="content"><img src="static\SearchSvg.svg" width="30" height="30" alt="SearchIcon"></div>
+                </i>
+            </button>
+        </div>
+        <script src="static\SearchBar.js"></script>
+    </header>
+
+    <div class="filtremembre">
+        <form id="FilterForm" action="/filters">
+            N° Members
+            <input type="checkbox" id="Member1" name="Filter" value="Member1" onchange="filterSub('Member1')">
+            <label for="Member1"> 1 </label>
+            <input type="checkbox" id="Member2" name="Filter" value="Member2" onchange="filterSub('Member2')">
+            <label for="Member2"> 2 </label>
+            <input type="checkbox" id="Member3" name="Filter" value="Member3" onchange="filterSub('Member3')">
+            <label for="Member3"> 3 </label>
+            <input type="checkbox" id="Member4" name="Filter" value="Member4" onchange="filterSub('Member4')">
+            <label for="Member4"> 4 </label>
+            <input type="checkbox" id="Member5" name="Filter" value="Member5" onchange="filterSub('Member5')">
+            <label for="Member5"> 5 </label>
+            <input type="checkbox" id="Member6" name="Filter" value="Member6" onchange="filterSub('Member6')">
+            <label for="Member6"> 6 </label>
+            <input type="checkbox" id="Member7" name="Filter" value="Member7" onchange="filterSub('Member7')">
+            <label for="Member7"> 7 </label>
+            <input type="checkbox" id="MultipleChoise" name="Filter" value="MultipleChoise"
+                onchange="filterSub('MultipleChoise')">
+            <label for="MultipleChoise"> Multiple Choise </label>
+        </form>
+    </div>
+
+    <div class="container">
+        {{ range .Tab}}
+        <div class="card">
+            <div class="face face1">
+                <div class="content"><img src={{ .Image }}></div>
+                <h2>{{ .Name }} </h2>
+            </div>
+            <div class="face face2">
+                <strong>Members : </strong>
+                {{ range .Members}}
+                {{ . }}
+                {{ end }}
+                <div class="bouton">
+                    <form id="ReadMore" action="/ReadMore" method="post">
+                        <button name="ReadMore" type="submit" value={{ .Name }} ><span>Read More</span></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</body>
+
+</html>
+{{ end }}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Luxurious+Roman&family=Mochiy+Pop+P+One&family=Moon+Dance&family=Rosarivo:ital@0;1&family=Rouge+Script&family=Russo+One&family=Teko:wght@300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Queen</h1>
+        <p> - find out more about them - </p>
+    </header>
+    <div class="local">
+        <h2>location</h2>
+    </div>
+
+
+</body>
+
+</html>
+
+
+{{define "readmorepage"}}<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document ReadMore</title>
+    <link rel="stylesheet" href="static/css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>
+            The Most Popular Artist API
+        </h1>
+        <nav>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About Us</a></li>
+        </nav>
+    </header>
+
+    <div class="container">
+        {{ range .Tab}}
+        <div class="card">
+            <div class="face face1">
+                <div class="content"><img src={{ .Image }}></div>
+                <h2>{{ .Name }} </h2>
+            </div>
+            <div class="face face2">
+                <strong>Members : </strong>
+                {{ range .Members}}
+                {{ . }}
+                {{ end }}
+                <div class="bouton">
+                    <form id="ReadMore" action="/ReadMore" method="post">
+                        <button name="ReadMore" type="submit" value={{ .Name }} ><span>Read More</span></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</body>
+
+</html>
+{{ end }}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Luxurious+Roman&family=Mochiy+Pop+P+One&family=Moon+Dance&family=Rosarivo:ital@0;1&family=Rouge+Script&family=Russo+One&family=Teko:wght@300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Queen</h1>
+        <p> - find out more about them - </p>
+    </header>
+    <div class="local">
+        <h2>location</h2>
+    </div>
+
+
+</body>
+
+</html>

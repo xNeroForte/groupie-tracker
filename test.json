@@ -1,0 +1,168 @@
+{
+    "type": "FeatureCollection",
+    "query": ["new", "york"],
+    "features": [
+      {
+        "id": "place.12178794975964500",
+        "type": "Feature",
+        "place_type": ["place"],
+        "relevance": 1,
+        "properties": {"wikidata": "Q60"},
+        "text": "New York",
+        "place_name": "New York, New York, United States",
+        "bbox": [-74.25909, 40.477399, -73.70001442, 40.917577],
+        "center": [-73.9866, 40.7306],
+        "geometry": {"type": "Point", "coordinates": [-73.9866, 40.7306]},
+        "context": [
+          {
+            "id": "district.12113562209855570",
+            "wikidata": "Q500416",
+            "text": "New York County"
+          },
+          {
+            "id": "region.17349986251855570",
+            "short_code": "US-NY",
+            "wikidata": "Q1384",
+            "text": "New York"
+          },
+          {
+            "id": "country.19678805456372290",
+            "wikidata": "Q30",
+            "short_code": "us",
+            "text": "United States"
+          }
+        ]
+      },
+      {
+        "id": "place.13504678377027870",
+        "type": "Feature",
+        "place_type": ["place"],
+        "relevance": 1,
+        "properties": {"wikidata": "Q3452597"},
+        "text": "New York Mills",
+        "place_name": "New York Mills, New York, United States",
+        "bbox": [-75.308270669, 43.087807029, -75.281685004, 43.114787992],
+        "center": [-75.2913, 43.1053],
+        "geometry": {"type": "Point", "coordinates": [-75.2913, 43.1053]},
+        "context": [
+          {
+            "id": "district.15592178548557480",
+            "wikidata": "Q115043",
+            "text": "Oneida County"
+          },
+          {
+            "id": "region.17349986251855570",
+            "short_code": "US-NY",
+            "wikidata": "Q1384",
+            "text": "New York"
+          },
+          {
+            "id": "country.19678805456372290",
+            "wikidata": "Q30",
+            "short_code": "us",
+            "text": "United States"
+          }
+        ]
+      },
+      {
+        "id": "place.3463920803027870",
+        "type": "Feature",
+        "place_type": ["place"],
+        "relevance": 1,
+        "properties": {"wikidata": "Q2228091"},
+        "text": "New York Mills",
+        "place_name": "New York Mills, Minnesota, United States",
+        "bbox": [-95.522541634, 46.406648063, -95.238284, 46.716759],
+        "center": [-95.3742, 46.5197],
+        "geometry": {"type": "Point", "coordinates": [-95.3742, 46.5197]},
+        "context": [
+          {
+            "id": "district.7380324655127040",
+            "wikidata": "Q180785",
+            "text": "Otter Tail County"
+          },
+          {
+            "id": "region.14740633650676580",
+            "short_code": "US-MN",
+            "wikidata": "Q1527",
+            "text": "Minnesota"
+          },
+          {
+            "id": "country.19678805456372290",
+            "wikidata": "Q30",
+            "short_code": "us",
+            "text": "United States"
+          }
+        ]
+      },
+      {
+        "id": "address.3920550808862740",
+        "type": "Feature",
+        "place_type": ["address"],
+        "relevance": 1,
+        "properties": {"accuracy": "street"},
+        "text": "New York Way",
+        "place_name": "New York Way, Spring Mountain Queensland 4300, Australia",
+        "center": [152.893382, -27.6841119],
+        "geometry": {"type": "Point", "coordinates": [152.893382, -27.6841119]},
+        "context": [
+          {"id": "postcode.11036198082618960", "text": "4300"},
+          {"id": "locality.11553119940183680", "text": "Spring Mountain"},
+          {
+            "id": "place.10987281989688270",
+            "wikidata": "Q34932",
+            "text": "Brisbane"
+          },
+          {
+            "id": "region.19496380243439240",
+            "short_code": "AU-QLD",
+            "wikidata": "Q36074",
+            "text": "Queensland"
+          },
+          {
+            "id": "country.9968792518346070",
+            "wikidata": "Q408",
+            "short_code": "au",
+            "text": "Australia"
+          }
+        ]
+      },
+      {
+        "id": "address.1360834385719718",
+        "type": "Feature",
+        "place_type": ["address"],
+        "relevance": 1,
+        "properties": {"accuracy": "street"},
+        "text": "New York Avenue",
+        "place_name": "New York Avenue, Warners Bay New South Wales 2282, Australia",
+        "center": [151.6588647, -32.9673742],
+        "geometry": {"type": "Point", "coordinates": [151.6588647, -32.9673742]},
+        "context": [
+          {"id": "postcode.9697159057239100", "text": "2282"},
+          {
+            "id": "locality.10951070205119670",
+            "wikidata": "Q7969790",
+            "text": "Warners Bay"
+          },
+          {
+            "id": "place.10044947352456400",
+            "wikidata": "Q57278",
+            "text": "Newcastle"
+          },
+          {
+            "id": "region.19913417492553050",
+            "short_code": "AU-NSW",
+            "wikidata": "Q3224",
+            "text": "New South Wales"
+          },
+          {
+            "id": "country.9968792518346070",
+            "wikidata": "Q408",
+            "short_code": "au",
+            "text": "Australia"
+          }
+        ]
+      }
+    ],
+    "attribution": "NOTICE: © 2022 Mapbox and its suppliers. All rights reserved. Use of this data is subject to the Mapbox Terms of Service (https://www.mapbox.com/about/maps/). This response and the information it contains may not be retained. POI(s) provided by Foursquare."
+  }
